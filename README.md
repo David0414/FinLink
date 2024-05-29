@@ -1,1 +1,1 @@
-# FintechApp
+# FinLink
