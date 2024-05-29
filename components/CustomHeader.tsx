@@ -47,11 +47,13 @@ const CustomHeader = () => {
           <Ionicons style={styles.searchIcon} name="search" size={20} color={Colors.dark} />
           <TextInput style={styles.input} placeholder="Search" placeholderTextColor={Colors.dark} />
         </View>
+        <Link href={'/cardInfo'} asChild>
+          <TouchableOpacity style={styles.circle}>
+            <Ionicons name={'card'} size={20} color={Colors.dark} />
+          </TouchableOpacity>
+        </Link>
         <View style={styles.circle}>
           <Ionicons name={'stats-chart'} size={20} color={Colors.dark} />
-        </View>
-        <View style={styles.circle}>
-          <Ionicons name={'card'} size={20} color={Colors.dark} />
         </View>
       </View>
     </BlurView>

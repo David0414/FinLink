@@ -38,7 +38,7 @@ const Page = () => {
                 <Text style={{ color: Colors.gray }}>{currency.symbol}</Text>
               </View>
               <View style={{ gap: 6, alignItems: 'flex-end' }}>
-                <Text>{currency.quote.EUR.price.toFixed(2)} €</Text>
+                <Text>{currency.quote.EUR.price.toFixed(2)} $</Text>
                 <View style={{ flexDirection: 'row', gap: 4 }}>
                   <Ionicons
                     name={currency.quote.EUR.percent_change_1h > 0 ? 'caret-up' : 'caret-down'}

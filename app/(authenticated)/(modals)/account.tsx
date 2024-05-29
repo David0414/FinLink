@@ -11,8 +11,8 @@ const Page = () => {
   const { user: clerkUser } = useClerkUser();
   const { signOut } = useAuth();
   const { user, updateUser } = useUser(); // Obtener y actualizar el usuario del contexto
-  const [firstName, setFirstName] = useState(clerkUser?.firstName ?? '');
-  const [lastName, setLastName] = useState(clerkUser?.lastName ?? '');
+  const [firstName, setFirstName] = useState(clerkUser?.firstName ?? user.firstName);
+  const [lastName, setLastName] = useState(clerkUser?.lastName ?? user.lastName);
   const [edit, setEdit] = useState(false);
 
   const onSaveUser = async () => {
@@ -55,7 +55,11 @@ const Page = () => {
     >
       <View style={{ alignItems: 'center' }}>
         <TouchableOpacity onPress={onCaptureImage} style={styles.captureBtn}>
-          {user.imageUrl && <Image source={{ uri: user.imageUrl }} style={styles.avatar} />}
+          {user.imageUrl ? (
+            <Image source={{ uri: user.imageUrl }} style={styles.avatar} />
+          ) : (
+            <Text style={{ color: '#fff', fontWeight: '500', fontSize: 16 }}>Seleccionar Imagen</Text>
+          )}
         </TouchableOpacity>
 
         <View style={{ flexDirection: 'row', gap: 6 }}>

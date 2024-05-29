@@ -30,14 +30,14 @@ const Page = () => {
       <View style={styles.account}>
         <View style={styles.row}>
           <Text style={styles.balance}>{balance()}</Text>
-          <Text style={styles.currency}>€</Text>
+          <Text style={styles.currency}>$</Text>
         </View>
         <TouchableOpacity
           style={[
             defaultStyles.pillButtonSmall,
             { backgroundColor: Colors.lightGray, marginVertical: 20 },
           ]}>
-          <Text style={[defaultStyles.buttonTextSmall, { color: Colors.dark }]}>Accounts</Text>
+          <Text style={[defaultStyles.buttonTextSmall, { color: Colors.dark }]}>Main Account</Text>
         </TouchableOpacity>
       </View>
 
@@ -71,7 +71,7 @@ const Page = () => {
                 {transaction.date.toLocaleString()}
               </Text>
             </View>
-            <Text>{transaction.amount}€</Text>
+            <Text>{transaction.amount}$</Text>
           </View>
         ))}
       </View>

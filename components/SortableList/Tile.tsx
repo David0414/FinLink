@@ -41,7 +41,7 @@ const Tile = ({ id, onLongPress }: TileProps) => {
       <View style={styles.container} pointerEvents="none">
         <Text style={{ color: Colors.gray, fontWeight: '500', fontSize: 16 }}>Spent this month</Text>
         <Text style={{ color: Colors.dark, fontWeight: 'bold', fontSize: 26, paddingTop: 10 }}>
-          1024€
+          100$
         </Text>
       </View>
     );
@@ -93,7 +93,7 @@ const Tile = ({ id, onLongPress }: TileProps) => {
                   fontSize: 18,
                   paddingVertical: 10,
                 }}>
-                {transactions[transactions.length - 1].amount}€
+                {transactions[transactions.length - 1].amount}$
               </Text>
               <Text style={{ color: Colors.gray, fontWeight: 'bold', fontSize: 16 }}>
                 {transactions[transactions.length - 1].title}

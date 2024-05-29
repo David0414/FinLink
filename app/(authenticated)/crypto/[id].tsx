@@ -56,7 +56,7 @@ const Page = () => {
 
   const animatedText = useAnimatedProps(() => {
     return {
-      text: `${state.y.price.value.value.toFixed(2)} €`,
+      text: `${state.y.price.value.value.toFixed(2)} $`,
       defaultValue: '',
     };
   });
@@ -146,7 +146,7 @@ const Page = () => {
                   {!isActive && (
                     <View>
                       <Text style={{ fontSize: 30, fontWeight: 'bold', color: Colors.dark }}>
-                        {tickers[tickers.length - 1].price.toFixed(2)} €
+                        {tickers[tickers.length - 1].price.toFixed(2)} $
                       </Text>
                       <Text style={{ fontSize: 18, color: Colors.gray }}>Today</Text>
                     </View>
@@ -172,7 +172,7 @@ const Page = () => {
                       tickCount: 5,
                       labelOffset: { x: -2, y: 0 },
                       labelColor: Colors.gray,
-                      formatYLabel: (v) => `${v} €`,
+                      formatYLabel: (v) => `${v} $`,
                       formatXLabel: (ms) => format(new Date(ms), 'MM/yy'),
                     }}
                     data={tickers!}

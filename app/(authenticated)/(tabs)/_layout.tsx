@@ -4,6 +4,8 @@ import { Tabs } from 'expo-router';
 import { BlurView } from 'expo-blur';
 import CustomHeader from '@/components/CustomHeader';
 
+
+
 const Layout = () => {
   return (
     <Tabs
@@ -40,15 +42,7 @@ const Layout = () => {
           headerTransparent: true,
         }}
       />
-      <Tabs.Screen
-        name="invest"
-        options={{
-          title: 'Invest',
-          tabBarIcon: ({ size, color }) => (
-            <FontAwesome name="line-chart" size={size} color={color} />
-          ),
-        }}
-      />
+     
       <Tabs.Screen
         name="transfers"
         options={{
@@ -68,10 +62,12 @@ const Layout = () => {
         }}
       />
       <Tabs.Screen
-        name="lifestyle"
+        name="invest"
         options={{
-          title: 'Lifestyle',
+          title: 'invest',
           tabBarIcon: ({ size, color }) => <FontAwesome name="th" size={size} color={color} />,
+          headerTransparent: true,
+
         }}
       />
     </Tabs>
